@@ -44,12 +44,12 @@ from aiogram.types   import Message
 # ══════════════════════════════════════════════════════════
 #  CONFIGURATION — fill in your credentials here
 # ══════════════════════════════════════════════════════════
-BOT_TOKEN     = "your_bot_token_here"
-GROUP_CHAT_ID = -1001234567890      # your group chat id (negative number)
+BOT_TOKEN     = "7781750126:AAEMY67mZixlhz3W5QyQNOdSd6jPVCkbAV4"
+GROUP_CHAT_ID = -1002266811493      # your group chat id (negative number)
 
-API_ID        = 12345678            # from my.telegram.org
-API_HASH      = "your_api_hash_here"
-SESSION_STR   = "your_session_string_here"
+API_ID        = 28165213            # from my.telegram.org
+API_HASH      = "74983137f88bb852802637dadf3d44a3"
+SESSION_STR   = "BQGtxF0ACMlQJ4Yp2QkynXYhXKVV5sTwW7m2wKdgi5jjj8YZ0q7SrcL1L7JWcM4-b54y79YA3kLKUr_XoApnnNA_9m0Kcl_Bb9jf19zxmurZlcdZbB_hIDtR7aqxDMDjJGNbhTqwCzDk0voKOiRGncIFF0R_Ch1H9YDN9ZcmagWBvCfycMP4QbJlae5lLmkGnNsk8R--zVRhhlZw0voGvlTESskkF_fbYYaN7UomTRsMPIE8IIh6Rr2FJeAR1MP9SZagejPC49ma1RB4ODfTMiYtI7S1FpvRnhbf8k4YMQjcQBWVQAi6Y0NbHt-KiAhrTcxbKpnh02acbfT76zQqCzkkmTqhaAAAAAHSbKT2AA"
 
 SILENCE_WAV = "silence.wav"
 CACHE_DIR   = "cache"
