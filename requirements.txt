@@ -1,0 +1,31 @@
+# ── Python packages (pip install -r requirements.txt) ─────────────────────────
+#
+# ⚠️  SYSTEM packages also required — install these first:
+#     sudo apt update
+#     sudo apt install ffmpeg nodejs python3 python3-pip python3-venv -y
+#
+#   ffmpeg  — audio extraction/conversion (used by yt-dlp post-processor)
+#   nodejs  — YouTube JS challenge solver (used by yt-dlp signature decryption)
+#   python3 — runtime (3.10+ required)
+# ──────────────────────────────────────────────────────────────────────────────
+
+# Telegram userbot client (pyrofork = pyrogram fork required by py-tgcalls)
+pyrofork
+
+# Pyrogram crypto acceleration (speeds up MTProto significantly)
+TgCrypto
+
+# Telegram voice/video call engine
+py-tgcalls==2.2.11
+
+# Telegram bot framework
+aiogram==3.7.0
+
+# YouTube search + download
+yt-dlp
+
+# Async HTTP client
+aiohttp
+
+# .env file loader
+python-dotenv
