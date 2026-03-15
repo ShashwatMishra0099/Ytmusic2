@@ -142,8 +142,18 @@ def _ytdlp_download_sync(query: str) -> dict:
     """
     os.makedirs(CACHE_DIR, exist_ok=True)
 
+    # HTTP 403 fix: spoof the exact User-Agent YouTube's Android app sends,
+    # and widen the client fallback chain so if android 403s we try
+    # android_embedded then android_vr — all bypass PO Token requirements.
     base_opts = {
-        "format": "18/bestaudio[acodec!=none]/best[acodec!=none]/best",
+        "format": (
+            "18"
+            "/bestaudio[acodec!=none][protocol=https]"
+            "/bestaudio[acodec!=none][protocol^=http]"
+            "/bestaudio[acodec!=none]"
+            "/best[acodec!=none]"
+            "/best"
+        ),
         "quiet": True,
         "no_warnings": True,
         "noplaylist": True,
@@ -151,9 +161,18 @@ def _ytdlp_download_sync(query: str) -> dict:
         "retries": 5,
         "fragment_retries": 5,
         "extractor_args": {
-            "youtube": {"player_client": ["android"]}
+            # Try android first, fall back to android_embedded and android_vr
+            # All three bypass PO Token; none accept cookies
+            "youtube": {"player_client": ["android", "android_embedded", "android_vr"]}
         },
-        # NO cookiefile — android client rejects cookies
+        # Spoof Android YouTube app User-Agent to avoid 403 on VPS IPs
+        "http_headers": {
+            "User-Agent": (
+                "com.google.android.youtube/19.09.37 "
+                "(Linux; U; Android 11) gzip"
+            ),
+        },
+        # NO cookiefile — android clients reject cookies
     }
 
     search_target = query
