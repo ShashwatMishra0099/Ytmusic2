@@ -45,10 +45,10 @@ from aiogram.types   import Message
 # ══════════════════════════════════════════════════════════
 #  CONFIGURATION — fill in your credentials here
 # ══════════════════════════════════════════════════════════
-BOT_TOKEN     = "your_bot_token_here"
-GROUP_CHAT_ID = -1001234567890      # your group chat id (negative number)
+BOT_TOKEN     = "7781750126:AAEMY67mZixlhz3W5QyQNOdSd6jPVCkbAV4"
+GROUP_CHAT_ID = -1002266811493      # your group chat id (negative number)
 
-API_ID        = 12345678            # from my.telegram.org
+API_ID        = 28165213            # from my.telegram.org
 API_HASH      = "your_api_hash_here"
 SESSION_STR   = "your_session_string_here"
 
